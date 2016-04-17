@@ -17,7 +17,14 @@ module.exports = {
         test: /\.css$/,
         loader: 'style!css!autoprefixer?browsers=last 2 versions'
       },
-      { test: /\.json$/, loader: 'json-loader' }
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      }
     ]
   },
   resolve: {
